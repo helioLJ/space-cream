@@ -112,6 +112,19 @@ main p {
   object-fit: cover;
 }
 
+header p {
+  display: none;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--fc-text);
+
+  text-align: center;
+}
+
+footer {
+  display: none;
+}
+
 @media (min-width: 768px) {
   main {
     max-width: 1200px;
@@ -140,6 +153,96 @@ main p {
 
   .card img {
     height: 24.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  body::before {
+    height: 100%;
+    width: 38rem;
+  }
+
+  header {
+    height: 100%;
+    width: 38rem;
+  }
+
+  header p {
+    display: block;
+    color: #FFF;
+    margin: 3.2rem 5rem;
+    font-size: 2.4rem;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  main p {
+    display: none;
+  }
+
+  .cards {
+    position: relative;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    margin-top: 5rem;
+
+    color: var(--bg-heading);
+    font-size: 1.4rem;
+    font-family: var(--ff-text);
+  }
+
+  footer span {
+    font-weight: bold;
+  }
+
+  .cards {
+    grid-template-areas: "A B C"
+      "D B F"
+      "D E F";
+  }
+
+  .cards div:nth-child(1) {
+    grid-area: A;
+  }
+
+  .cards div:nth-child(2) {
+    grid-area: B;
+  }
+
+  .cards div:nth-child(3) {
+    grid-area: C;
+  }
+
+  .cards div:nth-child(4) {
+    grid-area: D;
+  }
+
+  .cards div:nth-child(5) {
+    grid-area: E;
+  }
+
+  .cards div:nth-child(6) {
+    grid-area: F;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .card h2 {
+    display: none;
   }
 }
 
